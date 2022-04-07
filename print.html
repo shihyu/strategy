@@ -77,7 +77,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="HFT/OrderBook.html">Order Book</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="HFT/OrderBook.html">Order Book</a></li><li class="chapter-item expanded "><a href="Article/HFT_Strategy_and_Backtesting.html">Article</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -190,6 +190,43 @@
 <h2 id="參考"><a class="header" href="#參考">參考</a></h2>
 <ul>
 <li>https://kknews.cc/zh-tw/news/42e2bl3.html</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="hft-strategy-and-backtesting"><a class="header" href="#hft-strategy-and-backtesting">HFT Strategy and Backtesting</a></h1>
+<p>Before diving deeply into this post. I would suggest you to read the basics of high frequency trading (HFT) first: https://medium.com/@quantland/high-frequency-trading-803912b0d272</p>
+<h1 id="strategy"><a class="header" href="#strategy">Strategy</a></h1>
+<p>Making the best of anything requires a very good strategy. The same is true for HFT. I roughly classify the strategies into taker and maker, and analyze the pros and cons between them.</p>
+<h2 id="maker"><a class="header" href="#maker">Maker</a></h2>
+<p>Maker strategies post limit orders on an order book which will not be filled immediately, providing liquidity and depth. Nevertheless, they are not able to fully utilize alpha which can predict the price trend. This kind of strategy profits from the difference between bid-ask spreads.</p>
+<h2 id="taker"><a class="header" href="#taker">Taker</a></h2>
+<p>Taker strategies utilize alpha to predict expected returns and take everything from an order book if it is profitable. In comparison to maker strategies, taker strategies are unlikely to be compensated for inventory risks. An additional cost for taker strategies is transaction fees. Some more detailed costs that needed to be covered will be discussed in the following section.</p>
+<h1 id="details-of-hft-costs"><a class="header" href="#details-of-hft-costs">Details of HFT costs</a></h1>
+<p>In the previous article, we discussed about the taker fee rates for VIP 0 and VIP 9, now we dive into the details.</p>
+<h2 id="referral-program"><a class="header" href="#referral-program">Referral program</a></h2>
+<p>Let’s take the spot market at Binance for example. Before creating an account, you can set a referral code to get the best discount fee rate for your account. If you can find an inviter with a daily BNB balance over 500 and a base referral rate over 40%, your trading fee will get a 40% discount, which is very critical for HFT. Different exchanges have different referral programs. Making sure every detailed is correct is the key to make your trades more efficient.</p>
+<p><img src="Article/images/0p1Qq2SV7mlDVuN7.png" alt="img" /></p>
+<p>Binance referral, source: https://www.binance.com/en/support/faq/cbac15853b0243cda4a90c9c03ca0c38</p>
+<h2 id="designated-market-maker-dmm"><a class="header" href="#designated-market-maker-dmm">Designated Market Maker (DMM)</a></h2>
+<p>Much more discounts can be obtained by higher-level investors. A designated market maker is one that has been selected by an exchange as the primary market maker. Again, take the spot market at Binance for example, the best maker fee rate for a market maker can be as low as -0.01% , which is very critical for HFT.</p>
+<p><img src="Article/images/rbQU0e5e52XFIsbR.png" alt="img" /></p>
+<p>Binance liquidity provider, source: https://www.binance.com/en/support/announcement/0a24d83ea978466a9525c603e89368ce</p>
+<h1 id="backtesting"><a class="header" href="#backtesting">Backtesting</a></h1>
+<p>For any kind of traded assets, backtesting is necessary (as history may repeat itself). The theory is that strategies that work in past are more likely to work again in the future.</p>
+<h2 id="simulated-broker"><a class="header" href="#simulated-broker">Simulated broker</a></h2>
+<p>Making simulated results as close to live trading as possible is the most important thing in backtesting.</p>
+<h2 id="details-to-consider--latency"><a class="header" href="#details-to-consider--latency">Details to consider — latency</a></h2>
+<p>For HFT, we need to monitor latencies for different exchanges. We need to make latencies for simulated brokers as close to live trading latencies as possible. Failure to do so will overestimate or underestimate backtesting results.</p>
+<h2 id="details-to-consider--fill-model"><a class="header" href="#details-to-consider--fill-model">Details to consider — fill model</a></h2>
+<p>For maker strategies, limit orders placed on order books may influence market trends. Without dark pool data, we are not entirely sure the filled rates of our orders. To solve this problem, maker strategies need to be run live first. By collecting the log from live trading, you may make the backtesting closer to live trading when you train a fill model.</p>
+<h2 id="details-to-consider--disconnection"><a class="header" href="#details-to-consider--disconnection">Details to consider — disconnection</a></h2>
+<p>Disconnection may happen from time to time due to several problems. They could be problems with our own network or with an exchange disconnection. For Long-term trading strategies, disconnection may not be a critical problem. Yet, for HFT they do. A disconnection test is necessary before a strategy can go live.</p>
+<h1 id="hypertuning"><a class="header" href="#hypertuning">Hypertuning</a></h1>
+<p>Before going live, parameters require precise adjustments. Selecting a stable range for your parameters is the key for choosing the best parameter. I recommend using HiPlot for hypertuning. It is a clear and useful tool.</p>
+<p><img src="Article/images/7UgUJdje9NrGGPE7.png" alt="img" /></p>
+<p>HiPlot, source: https://facebookresearch.github.io/hiplot/</p>
+<h1 id="summary"><a class="header" href="#summary"><strong>Summary</strong></a></h1>
+<p>From my point of view, it is nearly impossible for a retail investor to do HFT. HFT is a huge project. To be successful, every aspect of HFT must be the best, including trade systems, backtest systems, and alpha researches, etc. Additionally, transaction fees are another concern. The VIP 9 fee rate is a must for HFT, which is really hard for a retail investor to obtain.</p>
+<ul>
+<li>https://medium.com/@quantland/hft-strategy-and-backtesting-4266d5c41cd9</li>
 </ul>
 
                         <script src="https://utteranc.es/client.js"
