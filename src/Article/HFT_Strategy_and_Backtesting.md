@@ -24,7 +24,7 @@ In the previous article, we discussed about the taker fee rates for VIP 0 and VI
 
 Let’s take the spot market at Binance for example. Before creating an account, you can set a referral code to get the best discount fee rate for your account. If you can find an inviter with a daily BNB balance over 500 and a base referral rate over 40%, your trading fee will get a 40% discount, which is very critical for HFT. Different exchanges have different referral programs. Making sure every detailed is correct is the key to make your trades more efficient.
 
-![img](../images/0p1Qq2SV7mlDVuN7.png)
+![img](images/0p1Qq2SV7mlDVuN7.png)
 
 Binance referral, source: https://www.binance.com/en/support/faq/cbac15853b0243cda4a90c9c03ca0c38
 
@@ -32,7 +32,7 @@ Binance referral, source: https://www.binance.com/en/support/faq/cbac15853b0243c
 
 Much more discounts can be obtained by higher-level investors. A designated market maker is one that has been selected by an exchange as the primary market maker. Again, take the spot market at Binance for example, the best maker fee rate for a market maker can be as low as -0.01% , which is very critical for HFT.
 
-![img](../images/rbQU0e5e52XFIsbR.png)
+![img](images/rbQU0e5e52XFIsbR.png)
 
 Binance liquidity provider, source: https://www.binance.com/en/support/announcement/0a24d83ea978466a9525c603e89368ce
 
@@ -60,7 +60,7 @@ Disconnection may happen from time to time due to several problems. They could b
 
 Before going live, parameters require precise adjustments. Selecting a stable range for your parameters is the key for choosing the best parameter. I recommend using HiPlot for hypertuning. It is a clear and useful tool.
 
-![img](../images/7UgUJdje9NrGGPE7.png)
+![img](images/7UgUJdje9NrGGPE7.png)
 
 HiPlot, source: https://facebookresearch.github.io/hiplot/
 
