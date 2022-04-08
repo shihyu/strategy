@@ -77,7 +77,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="HFT/OrderBook.html">Order Book</a></li><li class="chapter-item expanded "><a href="Article/HFT_Strategy_and_Backtesting.html">Article</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="index.html">Strategy Notes</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="HFT/OrderBook.html">Order Book</a></li><li class="chapter-item "><a href="Article/HFT_Strategy_and_Backtesting.html">Article</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -139,7 +139,8 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="什麼叫做order-book"><a class="header" href="#什麼叫做order-book">什麼叫做Order Book</a></h1>
+                        <h1 id="jason-strategy-notes"><a class="header" href="#jason-strategy-notes">Jason Strategy Notes</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="什麼叫做order-book"><a class="header" href="#什麼叫做order-book">什麼叫做Order Book</a></h1>
 <p>現在主流的交易所一般都使用Order Book進行交易，交易所在內部的Order Book上記錄所有買家和賣家的報價，比如像這樣：</p>
 <p><img src="HFT/images/orderbook_0.jpg" alt="img" /></p>
 <p>Bid表示買家，Offer表示賣家，這張報價單表示買賣雙方發出的所有報價單（Limit Order）。這張表才是高頻交易最關心的信息。任意時刻，買家的出價總是低於賣家（比如這裡的98對101）。所以報價雖然一直在變化，但是只有報價是不會有任何成交的。</p>
