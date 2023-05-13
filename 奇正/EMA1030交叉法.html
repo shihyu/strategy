@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Article - Jason Notes</title>
+        <title>EMA1030交叉法 - Jason Notes</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
@@ -76,7 +76,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html">Strategy Notes</a></li><li class="chapter-item expanded "><a href="../HFT/OrderBook.html">Order Book</a></li><li class="chapter-item expanded "><a href="../Article/HFT_Strategy_and_Backtesting.html" class="active">Article</a></li><li class="chapter-item expanded "><a href="../奇正/奇正.html">奇正</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../奇正/3C與其他有用型態.html">3C與其他有用型態</a></li><li class="chapter-item "><a href="../奇正/EMA1030交叉法.html">EMA1030交叉法</a></li><li class="chapter-item "><a href="../奇正/低價轉機股.html">低價轉機股</a></li><li class="chapter-item "><a href="../奇正/價格走勢才是終極真理.html">價格走勢才是終極真理</a></li><li class="chapter-item "><a href="../奇正/如何出場.html">如何出場</a></li><li class="chapter-item "><a href="../奇正/帶柄杯狀排列.html">帶柄杯狀排列</a></li><li class="chapter-item "><a href="../奇正/技術指標MA.html">技術指標MA</a></li><li class="chapter-item "><a href="../奇正/技術面選股.html">技術面選股</a></li><li class="chapter-item "><a href="../奇正/為何需要多元系統.html">為何需要多元系統</a></li><li class="chapter-item "><a href="../奇正/產業大趨勢選股.html">產業大趨勢選股</a></li><li class="chapter-item "><a href="../奇正/資金控管法第二板.html">資金控管法第二板</a></li><li class="chapter-item "><a href="../奇正/關鍵點操盤術.html">關鍵點操盤術</a></li><li class="chapter-item "><a href="../奇正/黃金律買進強勢類股中的最強勢股票.html">黃金律買進強勢類股中的最強勢股票</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html">Strategy Notes</a></li><li class="chapter-item expanded "><a href="../HFT/OrderBook.html">Order Book</a></li><li class="chapter-item expanded "><a href="../Article/HFT_Strategy_and_Backtesting.html">Article</a></li><li class="chapter-item expanded "><a href="../奇正/奇正.html">奇正</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../奇正/3C與其他有用型態.html">3C與其他有用型態</a></li><li class="chapter-item expanded "><a href="../奇正/EMA1030交叉法.html" class="active">EMA1030交叉法</a></li><li class="chapter-item "><a href="../奇正/低價轉機股.html">低價轉機股</a></li><li class="chapter-item "><a href="../奇正/價格走勢才是終極真理.html">價格走勢才是終極真理</a></li><li class="chapter-item "><a href="../奇正/如何出場.html">如何出場</a></li><li class="chapter-item "><a href="../奇正/帶柄杯狀排列.html">帶柄杯狀排列</a></li><li class="chapter-item "><a href="../奇正/技術指標MA.html">技術指標MA</a></li><li class="chapter-item "><a href="../奇正/技術面選股.html">技術面選股</a></li><li class="chapter-item "><a href="../奇正/為何需要多元系統.html">為何需要多元系統</a></li><li class="chapter-item "><a href="../奇正/產業大趨勢選股.html">產業大趨勢選股</a></li><li class="chapter-item "><a href="../奇正/資金控管法第二板.html">資金控管法第二板</a></li><li class="chapter-item "><a href="../奇正/關鍵點操盤術.html">關鍵點操盤術</a></li><li class="chapter-item "><a href="../奇正/黃金律買進強勢類股中的最強勢股票.html">黃金律買進強勢類股中的最強勢股票</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -138,43 +138,38 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="hft-strategy-and-backtesting"><a class="header" href="#hft-strategy-and-backtesting">HFT Strategy and Backtesting</a></h1>
-<p>Before diving deeply into this post. I would suggest you to read the basics of high frequency trading (HFT) first: https://medium.com/@quantland/high-frequency-trading-803912b0d272</p>
-<h1 id="strategy"><a class="header" href="#strategy">Strategy</a></h1>
-<p>Making the best of anything requires a very good strategy. The same is true for HFT. I roughly classify the strategies into taker and maker, and analyze the pros and cons between them.</p>
-<h2 id="maker"><a class="header" href="#maker">Maker</a></h2>
-<p>Maker strategies post limit orders on an order book which will not be filled immediately, providing liquidity and depth. Nevertheless, they are not able to fully utilize alpha which can predict the price trend. This kind of strategy profits from the difference between bid-ask spreads.</p>
-<h2 id="taker"><a class="header" href="#taker">Taker</a></h2>
-<p>Taker strategies utilize alpha to predict expected returns and take everything from an order book if it is profitable. In comparison to maker strategies, taker strategies are unlikely to be compensated for inventory risks. An additional cost for taker strategies is transaction fees. Some more detailed costs that needed to be covered will be discussed in the following section.</p>
-<h1 id="details-of-hft-costs"><a class="header" href="#details-of-hft-costs">Details of HFT costs</a></h1>
-<p>In the previous article, we discussed about the taker fee rates for VIP 0 and VIP 9, now we dive into the details.</p>
-<h2 id="referral-program"><a class="header" href="#referral-program">Referral program</a></h2>
-<p>Let’s take the spot market at Binance for example. Before creating an account, you can set a referral code to get the best discount fee rate for your account. If you can find an inviter with a daily BNB balance over 500 and a base referral rate over 40%, your trading fee will get a 40% discount, which is very critical for HFT. Different exchanges have different referral programs. Making sure every detailed is correct is the key to make your trades more efficient.</p>
-<p><img src="images/0p1Qq2SV7mlDVuN7.png" alt="img" /></p>
-<p>Binance referral, source: https://www.binance.com/en/support/faq/cbac15853b0243cda4a90c9c03ca0c38</p>
-<h2 id="designated-market-maker-dmm"><a class="header" href="#designated-market-maker-dmm">Designated Market Maker (DMM)</a></h2>
-<p>Much more discounts can be obtained by higher-level investors. A designated market maker is one that has been selected by an exchange as the primary market maker. Again, take the spot market at Binance for example, the best maker fee rate for a market maker can be as low as -0.01% , which is very critical for HFT.</p>
-<p><img src="images/rbQU0e5e52XFIsbR.png" alt="img" /></p>
-<p>Binance liquidity provider, source: https://www.binance.com/en/support/announcement/0a24d83ea978466a9525c603e89368ce</p>
-<h1 id="backtesting"><a class="header" href="#backtesting">Backtesting</a></h1>
-<p>For any kind of traded assets, backtesting is necessary (as history may repeat itself). The theory is that strategies that work in past are more likely to work again in the future.</p>
-<h2 id="simulated-broker"><a class="header" href="#simulated-broker">Simulated broker</a></h2>
-<p>Making simulated results as close to live trading as possible is the most important thing in backtesting.</p>
-<h2 id="details-to-consider--latency"><a class="header" href="#details-to-consider--latency">Details to consider — latency</a></h2>
-<p>For HFT, we need to monitor latencies for different exchanges. We need to make latencies for simulated brokers as close to live trading latencies as possible. Failure to do so will overestimate or underestimate backtesting results.</p>
-<h2 id="details-to-consider--fill-model"><a class="header" href="#details-to-consider--fill-model">Details to consider — fill model</a></h2>
-<p>For maker strategies, limit orders placed on order books may influence market trends. Without dark pool data, we are not entirely sure the filled rates of our orders. To solve this problem, maker strategies need to be run live first. By collecting the log from live trading, you may make the backtesting closer to live trading when you train a fill model.</p>
-<h2 id="details-to-consider--disconnection"><a class="header" href="#details-to-consider--disconnection">Details to consider — disconnection</a></h2>
-<p>Disconnection may happen from time to time due to several problems. They could be problems with our own network or with an exchange disconnection. For Long-term trading strategies, disconnection may not be a critical problem. Yet, for HFT they do. A disconnection test is necessary before a strategy can go live.</p>
-<h1 id="hypertuning"><a class="header" href="#hypertuning">Hypertuning</a></h1>
-<p>Before going live, parameters require precise adjustments. Selecting a stable range for your parameters is the key for choosing the best parameter. I recommend using HiPlot for hypertuning. It is a clear and useful tool.</p>
-<p><img src="images/7UgUJdje9NrGGPE7.png" alt="img" /></p>
-<p>HiPlot, source: https://facebookresearch.github.io/hiplot/</p>
-<h1 id="summary"><a class="header" href="#summary"><strong>Summary</strong></a></h1>
-<p>From my point of view, it is nearly impossible for a retail investor to do HFT. HFT is a huge project. To be successful, every aspect of HFT must be the best, including trade systems, backtest systems, and alpha researches, etc. Additionally, transaction fees are another concern. The VIP 9 fee rate is a must for HFT, which is really hard for a retail investor to obtain.</p>
-<ul>
-<li>https://medium.com/@quantland/hft-strategy-and-backtesting-4266d5c41cd9</li>
-</ul>
+                        <h2 id="ema1030交叉法"><a class="header" href="#ema1030交叉法">EMA1030交叉法</a></h2>
+<p>就像傳奇投資人班傑明．葛拉漢說的：「實現令人滿足的投資成果比多數人理解的更容易；但要實現卓越的成果，卻比表面上看起來難得多。」你要打敗80%的投資人，很簡單，買ETF就好了。</p>
+<p>　　但就像我之前討論的，超級績效與平均績效的差異十萬八千里。要想比平均績效更進一步，只要用一個方法就可以了，就是：10/30週EMA交叉向上做多，交叉向下看空。再作一點改進如下圖，大概就可以贏過90%的投資人。</p>
+<p>　　注意：宏觀多空愚痴妄，唯有一線透天機。預設立場而不尊重市場的人，即使曾為大師，到最後也難逃覆完命運。</p>
+<h2 id="規則"><a class="header" href="#規則"><strong>規則</strong></a></h2>
+<p>規則一：交叉向下</p>
+<p>10/30週EMA交叉向下，開始汰弱留強，只出不進。</p>
+<p>規則二：交叉向上</p>
+<p>10/30週EMA交叉向上，多頭確認，可加大部位。</p>
+<p>規則三：RSI買進輔助原則</p>
+<p>當交叉向下時均線通常能靈敏反應跌勢(因為多頭力竭通常已經掙扎一段時間均線已收斂)，而交叉向上時均線反應較慢，比如已經離低點千點以上。此時可用其他指標輔助，即：<strong>當RSI(14)跌破30再度站上時，開始進場，少量試單，有賺錢則逐步擴大部位</strong>。</p>
+<p>規則四：作空才作指數</p>
+<p>因指數空間有限，建議加碼不要超過2次(即三刀流)，作多時也儘量操作個股，作空時因個股放空先天不利，這時才作指數，罔賺一點。</p>
+<h2 id="範例"><a class="header" href="#範例"><strong>範例</strong></a></h2>
+<h3 id="台股2008"><a class="header" href="#台股2008"><strong>台股2008</strong></a></h3>
+<p><img src="images/1683771916-2971983960-g_n.png" alt="image" /></p>
+<h3 id="台股2015"><a class="header" href="#台股2015"><strong>台股2015</strong></a></h3>
+<p><img src="images/1683771916-2136497900-g_n.png" alt="image" /></p>
+<h3 id="台股2020"><a class="header" href="#台股2020"><strong>台股2020</strong></a></h3>
+<p><img src="images/1683771916-229516668-g_n.png" alt="image" /></p>
+<h3 id="nas2008"><a class="header" href="#nas2008"><strong>NAS2008</strong></a></h3>
+<p><img src="images/1683771916-3975187940-g_n.png" alt="image" /></p>
+<h3 id="nas2015"><a class="header" href="#nas2015"><strong>NAS2015</strong></a></h3>
+<p>失敗範例</p>
+<p><img src="images/1683771917-827645657-g_n.png" alt="image" /></p>
+<h3 id="nas2020"><a class="header" href="#nas2020"><strong>NAS2020</strong></a></h3>
+<p><img src="images/1683771917-2109701934-g_n.png" alt="image" /></p>
+<h3 id="台灣櫃買2018"><a class="header" href="#台灣櫃買2018"><strong>台灣櫃買2018</strong></a></h3>
+<p><img src="images/1683771922-457934353-g_n.png" alt="image" /></p>
+<h3 id="dow2018"><a class="header" href="#dow2018"><strong>DOW2018</strong></a></h3>
+<p>下圖顯示，加入RSI進場點，績效增加一倍。</p>
+<p><img src="images/1683771923-2201300018-g_n.png" alt="image" /></p>
 
                         <script src="https://utteranc.es/client.js"
                             repo="imxood/imxood.github.io"
@@ -187,10 +182,10 @@
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../HFT/OrderBook.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../奇正/3C與其他有用型態.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
-                            <a rel="next" href="../奇正/奇正.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../奇正/低價轉機股.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         <div style="clear: both"></div>
@@ -199,10 +194,10 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../HFT/OrderBook.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../奇正/3C與其他有用型態.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
-                    <a rel="next" href="../奇正/奇正.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../奇正/低價轉機股.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
