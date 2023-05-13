@@ -50,7 +50,7 @@
 
 　　Mark Minervini(超級績效--金融怪傑交易之道)：50ma, 150ma, 200ma(如下節)
 
-　　在台灣，一般是做如下分類：(摘自廖繼宏：我的技術線形會轉彎)
+　　在臺灣，一般是做如下分類：(摘自廖繼宏：我的技術線形會轉彎)
 
 　　移動平均線依時間長短，可分為短期、中期及長期移動平均線。實務上，短期為10日以下的移動平均線，中期則是介於20日的月線至60日的季線移動平均線，長期則是半年線以上的移動平均線。
 
@@ -66,7 +66,7 @@
 
 　　◆20日線：即月線，普遍使用，個人在實務操作上判斷中期走勢時最常使用的均線。
 
-　　◆60日線：即季線，樣本大小適中，波動幅度平滑，有軌跡可尋，轉折點明顯有效。我們通常以季來觀察景氣變化，上市櫃公司公布季報對股價影響大。
+　　◆60日線：即季線，樣本大小適中，波動幅度平滑，有軌跡可尋，轉折點明顯有效。我們通常以季來觀察景氣變化，上市櫃公司公佈季報對股價影響大。
 
 (3)長期移動平均線
 
@@ -200,7 +200,7 @@
 
 ![img](images/WmV_2g22cL7AwyuhAL_8q_7NyhaufQ2vdXW-JYSVSX5rZDiX9r8ixashNYPYzq07FILu_KXg67Oo3XRtbmEVd9tvbCD6Gphk_OosIJOOdj93aEFz3f6JBNeP5OzNJHoBN77M7gGRCM7og9LJXKdOjVo3ViJulGCE4NdQBQNqGAStg-DOdTw1JD76uEcagg)
 
-[0013_多元_台灣]
+[0013_多元_臺灣]
 
 ![img](images/yAt5aL3qR1yilfMsuE9KMQd_J_crQTlUk5fGnP97wiE_nJieaOz50xgkH2d53mTZ8WrMStAtnvS88bcEZuyneoqYYitYXfQmH7V2eOHzN8Rb82M5OZ5e9YvVUrdVvFzBWzPPnWrjcHylTPJnLav4ZCQnyPEaZ8fhjLQTLVM3n7oSkXL_ZekyEhChb2zb5A)
 
@@ -238,7 +238,7 @@
 
 ■ 我的技術線形會轉彎 / 廖繼宏
 
-■ 技術指標在台灣市場的應用 / 杜金龍
+■ 技術指標在臺灣市場的應用 / 杜金龍
 
 ■ 專業投機原理 / Victor Sperandeo
 
